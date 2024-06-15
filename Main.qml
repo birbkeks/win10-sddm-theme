@@ -53,6 +53,10 @@ Item {
         MouseArea {
             id: mouseArea
             anchors.fill: parent
+            drag.target: timeDate
+            drag.axis: Drag.YAxis
+            drag.minimumY: -Screen.height / 2
+            drag.maximumY: 0
             focus: true
 
             onClicked: {
@@ -69,6 +73,19 @@ Item {
                 mouseArea.enabled = false
                 seqStart.start()
                 parStart.start()
+            }
+
+            property bool dragActive: drag.active
+
+            onDragActiveChanged: {
+                if(drag.active) {}
+                else {
+                    listView.focus = true
+                    mouseArea.focus = false
+                    mouseArea.enabled = false
+                    seqStart.start()
+                    parslideStart.start()
+                }
             }
         }
 
@@ -91,6 +108,19 @@ Item {
                 to: 0
                 duration: 125
             }
+
+            NumberAnimation {
+                target: startupBg
+                properties: "opacity"
+                from: 1
+                to: 0
+                duration: 100
+            }
+        }
+
+        ParallelAnimation {
+            id: parslideStart
+            running: false
 
             NumberAnimation {
                 target: startupBg
@@ -210,7 +240,7 @@ Item {
                 }
             }
         }
-    }          
+    }
 
     Item {
         id: rightPanel
