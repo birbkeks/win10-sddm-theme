@@ -195,8 +195,8 @@ Item {
                 anchors {
                     bottom: parent.bottom
                     left: parent.left
-                    bottomMargin: 75
-                    leftMargin: 30
+                    bottomMargin: 90
+                    leftMargin: 35
                 }
 
                 property date dateTime: new Date()
@@ -210,16 +210,27 @@ Item {
                     id: time
 
                     color: "white"
-                    font.pointSize: 80
+                    font.pointSize: 95
                     font.family: segoeuil.name
                     font.weight: Font.Thin
                     renderType: Text.NativeRendering
+                    text: Qt.formatTime(timeContainer.dateTime, "hh:mm")
+
                     anchors {
                         horizontalCenter: parent.horizontalCenter
                         left: parent.left
                     }
+                }
 
-                    text: Qt.formatTime(timeContainer.dateTime, "hh:mm")
+                Rectangle {
+                    id: spacingRect
+                    color: "transparent"
+                    width: 15
+                    height: 15
+
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                    }
                 }
 
                 Text {
@@ -231,12 +242,11 @@ Item {
                     font.weight: Font.Thin
                     renderType: Text.NativeRendering
                     horizontalAlignment: Text.AlignLeft
+                    text: Qt.formatDate(timeContainer.dateTime, "dddd, MMMM dd")
 
                     anchors {
                         horizontalCenter: parent.horizontalCenter
                     }
-
-                    text: Qt.formatDate(timeContainer.dateTime, "dddd, MMMM dd")
                 }
             }
         }
@@ -250,7 +260,7 @@ Item {
         anchors {
             bottom: parent.bottom
             right: parent.right
-            margins: 85
+            margins: 75
         }
 
         PowerPanel {
