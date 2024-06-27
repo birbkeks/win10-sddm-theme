@@ -57,7 +57,7 @@ FocusScope {
         visible: false
 
         x: -(icon.width / 2)
-        y: -(icon.width * 2) + (icon.width / 2)
+        y: -(icon.width * 2) + (icon.width * 0.8)
     }
 
     OpacityMask {
@@ -90,7 +90,7 @@ FocusScope {
         renderType: Text.NativeRendering
 
         anchors {
-            topMargin: 25
+            topMargin: 15
             horizontalCenter: icon.horizontalCenter
             top: icon.bottom
         }
