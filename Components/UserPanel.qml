@@ -152,13 +152,14 @@ FocusScope {
 
                     background: Rectangle {
                         color: "#2A2A2A"
-                        border.width: 1.4
+                        border.width: 1
                         border.color: "#1A1A1A"
                     }
                 }
 
                 onClicked: {
                     sddm.login(model.name, password, session)
+                    loginButtonTip.hide()
                 }
             }
 

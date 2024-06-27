@@ -24,80 +24,81 @@ Item {
         width: 50
         hoverEnabled: true
 
-    Text {
-        color: "white"
-        font.family: iconfont.name
-        text: String.fromCodePoint(0xe7e8)
-        renderType: Text.NativeRendering
-        font.pointSize: powerButton.height / 2
-        anchors.centerIn: powerButton
-    }
-
-    ToolTip {
-        id: powerButtonTip
-
-        delay: 1000
-        timeout: 4800
-        leftPadding: 9
-        rightPadding: 9
-        topPadding: 7
-        bottomPadding: 7
-        y: powerButton.height + 5
-        z: 2
-        visible: powerButton.hovered
-
-        contentItem: Text {
-            text: "Power"
-            font.family: segoeuil.name
-            renderType: Text.NativeRendering
-            font.weight: Font.DemiBold
+        Text {
             color: "white"
+            font.family: iconfont.name
+            text: String.fromCodePoint(0xe7e8)
+            renderType: Text.NativeRendering
+            font.pointSize: powerButton.height / 2
+            anchors.centerIn: powerButton
+        }
+
+        ToolTip {
+            id: powerButtonTip
+
+            delay: 1000
+            timeout: 4800
+            leftPadding: 9
+            rightPadding: 9
+            topPadding: 7
+            bottomPadding: 7
+            y: powerButton.height + 5
+            z: 2
+            visible: powerButton.hovered
+
+            contentItem: Text {
+                text: "Power"
+                font.family: segoeuil.name
+                renderType: Text.NativeRendering
+                font.weight: Font.DemiBold
+                color: "white"
+            }
+
+            background: Rectangle {
+                color: "#2A2A2A"
+                border.width: 1.4
+                border.color: "#1A1A1A"
+            }
         }
 
         background: Rectangle {
-            color: "#2A2A2A"
-            border.width: 1.4
-            border.color: "#1A1A1A"
+            id: powerButtonBackground
+            color: "transparent"
         }
-    }
 
-    background: Rectangle {
-        id: powerButtonBackground
-        color: "transparent"
-    }
+        states: [
+            State {
+                name: "pressed"
+                when: powerButton.down
+                PropertyChanges {
+                    target: powerButtonBackground
+                    color: "#33FFFFFF"
+                }
+            },
 
-    states: [
-        State {
-            name: "pressed"
-            when: powerButton.down
-            PropertyChanges {
-                target: powerButtonBackground
-                color: "#33FFFFFF"
+            State {
+                name: "hovered"
+                when: powerButton.hovered
+                PropertyChanges {
+                    target: powerButtonBackground
+                    color: "#1AFFFFFF"
+                }
+            },
+
+            State {
+                name: "selection"
+                when: powerPopup.visible
+                PropertyChanges {
+                    target: powerButtonBackground
+                    color: "transparent"
+                }
             }
-        },
-
-        State {
-            name: "hovered"
-            when: powerButton.hovered
-            PropertyChanges {
-                target: powerButtonBackground
-                color: "#1AFFFFFF"
-            }
-        },
-
-        State {
-            name: "selection"
-            when: powerPopup.visible
-            PropertyChanges {
-                target: powerButtonBackground
-                color: "transparent"
-            }
-        }
-    ]
+        ]
 
         onClicked: {
             powerPopup.visible ? powerPopup.close() : powerPopup.open()
             powerPopup.visible === powerPopup.open ; powerButton.state = "selection"
+            powerButtonTip.hide()
         }
     }
 
@@ -145,7 +146,7 @@ Item {
 
                 background: Rectangle {
                     color: "#2A2A2A"
-                    border.width: 1.4
+                    border.width: 1
                     border.color: "#1A1A1A"
                 }
             }

@@ -2,8 +2,6 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Item {
-    property int currentIndex: keyboard.currentLayout
-
     implicitHeight: layoutButton.height
     implicitWidth: layoutButton.width
 
@@ -15,6 +13,13 @@ Item {
     FontLoader {
         id: segoeuil
         source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
+    }
+
+    signal valueChanged(int id)
+
+    // This gives an error but works, applying what the error says causes it to not work so this stays like that for a while.
+    onValueChanged: {
+        keyboard.currentLayout = id
     }
 
     DelegateModel {
@@ -73,6 +78,7 @@ Item {
             onClicked: {
                 layoutList.currentIndex = index
                 layoutPopup.close()
+                valueChanged(layoutList.currentIndex)
             }
         }
     }

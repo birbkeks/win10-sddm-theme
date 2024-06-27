@@ -203,82 +203,83 @@ Item {
         width: 50
         hoverEnabled: true
 
-    Text {
-        color: "white"
-        font.family: iconfont.name
-        text: String.fromCodePoint(0xe776)
-        renderType: Text.NativeRendering
-        font.pointSize: sessionButton.height / 2
-        anchors.centerIn: sessionButton
-    }
-
-    ToolTip {
-        id: sessionButtonTip
-
-        delay: 1000
-        timeout: 4800
-        leftPadding: 9
-        rightPadding: 9
-        topPadding: 7
-        bottomPadding: 7
-        y: sessionButton.height + 5
-        z: 2
-        visible: sessionButton.hovered
-
-        contentItem: Text {
-            text: "Session"
-            font.family: segoeuil.name
-            renderType: Text.NativeRendering
-            font.weight: Font.DemiBold
+        Text {
             color: "white"
+            font.family: iconfont.name
+            text: String.fromCodePoint(0xe776)
+            renderType: Text.NativeRendering
+            font.pointSize: sessionButton.height / 2
+            anchors.centerIn: sessionButton
+        }
+
+        ToolTip {
+            id: sessionButtonTip
+
+            delay: 1000
+            timeout: 4800
+            leftPadding: 9
+            rightPadding: 9
+            topPadding: 7
+            bottomPadding: 7
+            y: sessionButton.height + 5
+            z: 2
+            visible: sessionButton.hovered
+
+            contentItem: Text {
+                text: "Session"
+                font.family: segoeuil.name
+                renderType: Text.NativeRendering
+                font.weight: Font.DemiBold
+                color: "white"
+            }
+
+            background: Rectangle {
+                color: "#2A2A2A"
+                border.width: 1
+                border.color: "#1A1A1A"
+            }
         }
 
         background: Rectangle {
-            color: "#2A2A2A"
-            border.width: 1.4
-            border.color: "#1A1A1A"
+            id: sessionButtonBackground
+            color: "transparent"
+        }
+
+        states: [
+            State {
+                name: "pressed"
+                when: sessionButton.down
+                PropertyChanges {
+                    target: sessionButtonBackground
+                    color: "#33FFFFFF"
+                }
+            },
+
+            State {
+                name: "hovered"
+                when: sessionButton.hovered
+                PropertyChanges {
+                    target: sessionButtonBackground
+                    color: "#1AFFFFFF"
+                }
+            },
+
+            State {
+                name: "selection"
+                when: sessionPopup.visible
+                PropertyChanges {
+                    target: sessionButtonBackground
+                    color: "transparent"
+                }
+            }
+        ]
+
+        onClicked: {
+            sessionPopup.visible ? sessionPopup.close() : sessionPopup.open()
+            sessionPopup.visible === sessionPopup.open ; sessionButton.state = "selection"
+            sessionButtonTip.hide()
         }
     }
-
-    background: Rectangle {
-        id: sessionButtonBackground
-        color: "transparent"
-    }
-
-    states: [
-        State {
-            name: "pressed"
-            when: sessionButton.down
-            PropertyChanges {
-                target: sessionButtonBackground
-                color: "#33FFFFFF"
-            }
-        },
-
-        State {
-            name: "hovered"
-            when: sessionButton.hovered
-            PropertyChanges {
-                target: sessionButtonBackground
-                color: "#1AFFFFFF"
-            }
-        },
-
-        State {
-            name: "selection"
-            when: sessionPopup.visible
-            PropertyChanges {
-                target: sessionButtonBackground
-                color: "transparent"
-            }
-        }
-    ]
-
-    onClicked: {
-        sessionPopup.visible ? sessionPopup.close() : sessionPopup.open()
-        sessionPopup.visible === sessionPopup.open ; sessionButton.state = "selection"
-    }
-}
 
     Popup {
         id: sessionPopup

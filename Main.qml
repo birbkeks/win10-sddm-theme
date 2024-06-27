@@ -276,6 +276,7 @@ Item {
 
         LayoutPanel {
             id: layoutPanel
+
             anchors {
                 right: sessionPanel.left
             }
@@ -403,6 +404,7 @@ Item {
             Button {
                 id: prevUser
                 anchors.left: parent.left
+                enabled: false
                 visible: false
             }
 
@@ -422,6 +424,7 @@ Item {
             Button {
                 id: nextUser
                 anchors.right: parent.right
+                enabled: false
                 visible: false
             }
         }
