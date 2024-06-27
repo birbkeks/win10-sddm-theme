@@ -169,7 +169,6 @@ FocusScope {
         }
     }
 
-
     FalsePass {
         id: falsePass
         visible: false
