@@ -33,6 +33,10 @@ Button {
                 echoMode: TextInput.Normal
             }
             PropertyChanges {
+                target: passwordFieldPin
+                echoMode: TextInput.Normal
+            }
+            PropertyChanges {
                 target: revealButtonBackground
                 color: config.Color
             }
@@ -45,6 +49,10 @@ Button {
             name: "off"
             PropertyChanges {
                 target: passwordField
+                echoMode: TextInput.Password
+            }
+            PropertyChanges {
+                target: passwordFieldPin
                 echoMode: TextInput.Password
             }
         },

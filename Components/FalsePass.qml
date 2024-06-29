@@ -115,26 +115,50 @@ FocusScope {
 
             onClicked: {
                 falsePass.visible = false
-                passwordField.visible = true
-                passwordField.enabled = true
-                passwordField.focus = true
+
+                passwordField.visible = config.PinMode === "off" ? true : false
+                passwordField.enabled = config.PinMode === "off" ? true : false
+                passwordField.focus = config.PinMode === "off" ? true : false
+
+                passwordFieldPin.visible = config.PinMode === "off" ? false : true
+                passwordFieldPin.enabled = config.PinMode === "off" ? false : true
+                passwordFieldPin.focus = config.PinMode === "off" ? false : true
+
                 passwordField.text = ""
+
+                passwordFieldPin.text = ""
             }
 
             Keys.onReturnPressed: {
                 falsePass.visible = false
-                passwordField.visible = true
-                passwordField.enabled = true
-                passwordField.focus = true
+
+                passwordField.visible = config.PinMode === "off" ? true : false
+                passwordField.enabled = config.PinMode === "off" ? true : false
+                passwordField.focus = config.PinMode === "off" ? true : false
+
+                passwordFieldPin.visible = config.PinMode === "off" ? false : true
+                passwordFieldPin.enabled = config.PinMode === "off" ? false : true
+                passwordFieldPin.focus = config.PinMode === "off" ? false : true
+
                 passwordField.text = ""
+
+                passwordFieldPin.text = ""
             }
 
             Keys.onEnterPressed: {
                 falsePass.visible = false
-                passwordField.visible = true
-                passwordField.enabled = true
-                passwordField.focus = true
+
+                passwordField.visible = config.PinMode === "off" ? true : false
+                passwordField.enabled = config.PinMode === "off" ? true : false
+                passwordField.focus = config.PinMode === "off" ? true : false
+
+                passwordFieldPin.visible = config.PinMode === "off" ? false : true
+                passwordFieldPin.enabled = config.PinMode === "off" ? false : true
+                passwordFieldPin.focus = config.PinMode === "off" ? false : true
+
                 passwordField.text = ""
+
+                passwordFieldPin.text = ""
             }
         }
     }

@@ -11,6 +11,8 @@ FocusScope {
 
     property alias password: passwordField.text
 
+    property alias passwordpin: passwordFieldPin.text
+
     property int session: sessionPanel.session
 
     FontLoader {
@@ -37,14 +39,25 @@ FocusScope {
       target: sddm
 
         function onLoginFailed() {
+
             passwordField.visible = false
             passwordField.enabled = false
+            passwordField.focus = false
+
+            passwordFieldPin.visible = false
+            passwordFieldPin.enabled = false
+            passwordFieldPin.focus = false
+
             falsePass.visible = true
             falsePass.focus = true
         }
 
         function onLoginSucceeded() {
+
             passwordField.visible = false
+
+            passwordFieldPin.visible = false
+
             truePass.visible = true
         }
     }
@@ -98,7 +111,9 @@ FocusScope {
 
     PasswordField {
         id: passwordField
-        visible: true
+        visible: config.PinMode === "off" ? true : false
+        enabled: config.PinMode === "off" ? true : false
+        focus: config.PinMode === "off" ? true : false
         x: -135
 
         anchors {
@@ -130,6 +145,7 @@ FocusScope {
 
             LoginButton {
                 id: loginButton
+                visible: true
 
                 ToolTip {
                     id: loginButtonTip
@@ -165,6 +181,53 @@ FocusScope {
 
             RevealButton {
                 id: revealButton
+                visible: false
+            }
+        }
+    }
+
+    PasswordFieldPin {
+        id: passwordFieldPin
+        visible: config.PinMode === "off" ? false : true
+        enabled: config.PinMode === "off" ? false : true
+        focus: config.PinMode === "off" ? false : true
+
+        x: -135
+
+        validator: IntValidator { // this dude allows only numbers to be typed, if something goes wrong, blame this dude.
+            bottom: 8
+            top: 1000
+        }
+
+        anchors {
+            topMargin: 25
+            top: name.bottom
+        }
+
+        onTextChanged: {
+            if (passwordFieldPin.text !== "") {
+                passwordFieldPin.width = 257
+                revealButtonPin.x = passwordFieldPin.width
+                revealButtonPin.visible = true
+            }
+
+            else {
+                passwordFieldPin.width = 289
+                revealButtonPin.visible = false
+            }
+
+            if (passwordFieldPin.length > 3 ) {
+                sddm.login(model.name, passwordpin, session)
+            }
+        }
+
+        LoginBg {
+            id: loginBgPin
+
+            x: -3
+
+            RevealButton {
+                id: revealButtonPin
                 visible: false
             }
         }
