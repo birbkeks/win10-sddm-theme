@@ -269,6 +269,7 @@ Item {
 
         SessionPanel {
             id: sessionPanel
+
             anchors {
                 right: powerPanel.left
             }

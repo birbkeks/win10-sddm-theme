@@ -167,6 +167,7 @@ Item {
         onClicked: {
             layoutPopup.visible ? layoutPopup.close() : layoutPopup.open()
             layoutPopup.visible === layoutPopup.open ; layoutButton.state = "selection"
+            layoutButtonTip.hide()
         }
     }
 
