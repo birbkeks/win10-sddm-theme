@@ -109,7 +109,7 @@ FocusScope {
         onTextChanged: {
             if (passwordField.text !== "") {
                 passwordField.width = 226
-                loginButton.x = passwordField.width + loginButton.width
+                loginButton.x = passwordField.width + loginButton.width + 1
                 revealButton.x = passwordField.width
                 revealButton.visible = true
             }
