@@ -320,7 +320,7 @@ Item {
 
         Rectangle {
             width: 150
-            height: 58 * listView2.count
+            height: listView2.count > 17 ? Screen.height - 68 : 58 * listView2.count
             color: "transparent"
             clip: true
 
@@ -360,8 +360,9 @@ Item {
                     model: userModel
                     currentIndex: userModel.lastIndex
                     delegate: userDelegate2
-                    verticalLayoutDirection: ListView.BottomToTop
+                    verticalLayoutDirection: ListView.TopToBottom
                     orientation: ListView.Vertical
+                    interactive: listView2.count > 17 ? true : false
 
                     anchors {
                         left: prevUser2.right
@@ -415,6 +416,7 @@ Item {
                 model: userModel
                 delegate: userDelegate
                 currentIndex: userModel.lastIndex
+                interactive: false
 
                 anchors {
                     left: prevUser.right

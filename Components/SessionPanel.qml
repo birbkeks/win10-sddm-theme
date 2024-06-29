@@ -287,7 +287,7 @@ Item {
         x: Math.round((parent.width - width) / 2)
         y: Math.round(-sessionButton.height -(sessionPopup.height) + 45)
         z: 3
-        topPadding: 36
+        topPadding: 15
         bottomPadding: 15
         leftPadding: 15
         rightPadding: 15
@@ -304,6 +304,9 @@ Item {
                 x: 1
                 y: 1
                 z: 3
+
+                visible: false // disabled for now because i have no idea how to add on screen keyboard :3
+                enabled: false
 
                 Text {
                     color: "black"
@@ -343,6 +346,7 @@ Item {
             currentIndex: sessionModel.lastIndex
             clip: true
             spacing: 25
+            interactive: false
         }
 
         enter: Transition {

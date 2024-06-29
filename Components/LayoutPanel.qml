@@ -43,46 +43,55 @@ Item {
                 text: modelData.longName
             }
 
-        background: Rectangle {
-            id: layoutEntryBackground
-            color: "transparent"
-            border.width: 0
-            border.color: "#29292A"
-        }
-
-        states: [
-            State {
-                name: "focused"
-                when: layoutEntry.focus
-                PropertyChanges {
-                    target: layoutEntryBackground
-                    color: config.Color
-                    border.color: config.Color
-                    border.width: 1
-                }
-            },
-            State {
-                name: "hovered"
-                when: layoutEntry.hovered
-                PropertyChanges {
-                target: layoutEntryBackground
-                color: "#30FFFFFF"
-                border.color: "#30FFFFFF"
-                border.width: 1
-                }
+            background: Rectangle {
+                id: layoutEntryBackground
+                color: "transparent"
             }
-        ]
 
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                layoutList.currentIndex = index
-                layoutPopup.close()
-                valueChanged(layoutList.currentIndex)
+            states: [
+                State {
+                    name: "focused"
+                    when: layoutEntry.focus
+                    PropertyChanges {
+                        target: layoutEntryBackground
+                        color: config.Color
+                    }
+                },
+
+                State {
+                    name: "hovered"
+                    when: layoutEntry.hovered
+                    PropertyChanges {
+                    target: layoutEntryBackground
+                    color: "#343434"
+                    }
+                }
+            ]
+
+            MouseArea {
+                anchors.fill: parent
+
+                onPressed: {
+                    layoutEntryBackground.color = "#35FFFFFF"
+                }
+
+                onReleased: {
+                    if (layoutEntry.focus) {
+                        layoutEntryBackground.color = config.Color
+                    }
+                    else {
+                        layoutEntryBackground.color = "#1E1E1E"
+                    }
+                }
+
+                onClicked: {
+                    layoutList.currentIndex = index
+                    layoutPopup.close()
+                    valueChanged(layoutList.currentIndex)
+                }
             }
         }
     }
-}
 
     Button {
         id: layoutButton
@@ -127,7 +136,7 @@ Item {
 
             background: Rectangle {
                 color: "#2A2A2A"
-                border.width: 1.4
+                border.width: 1
                 border.color: "#1A1A1A"
             }
         }
@@ -176,13 +185,13 @@ Item {
         width: 121
         x: Math.round((parent.width - width) / 2)
         y: Math.round(-layoutButton.height -(layoutPopup.height) + 45)
-        z: 3
         topPadding: 5
         bottomPadding: 5
         leftPadding: 0
         rightPadding: 0
+
         background: Rectangle {
-        color: "#29292A"
+            color: "#1E1E1E"
         }
 
         contentItem: ListView {
@@ -190,6 +199,8 @@ Item {
             implicitHeight: contentHeight
             model: layoutWrapper
             currentIndex: keyboard.currentLayout
+            clip: true
+            interactive: false
         }
 
         enter: Transition {
