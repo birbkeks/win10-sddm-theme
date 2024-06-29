@@ -287,7 +287,7 @@ Item {
         x: Math.round((parent.width - width) / 2)
         y: Math.round(-sessionButton.height -(sessionPopup.height) + 45)
         z: 3
-        topPadding: 15
+        topPadding: 5
         bottomPadding: 15
         leftPadding: 15
         rightPadding: 15

@@ -4,7 +4,7 @@ import QtQuick.Controls 2.15
 Button {
     id: loginButton
     hoverEnabled: true
-    width: 32
+    width: 31
     height: 32
     x: passwordField.width
 
@@ -12,7 +12,7 @@ Button {
     color: "white"
     text: String.fromCodePoint(0xebe7)
     font.family: iconfont.name
-    font.pointSize: 12
+    font.pointSize: 13
     renderType: Text.NativeRendering
     anchors.centerIn: parent
     }

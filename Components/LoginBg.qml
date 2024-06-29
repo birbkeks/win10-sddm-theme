@@ -9,12 +9,12 @@ Button {
 
     background: Rectangle {
         id: loginbgBackground
-        width: 294
+        width: 293
         height: 36
         x: -2
         y: -2
         color: "transparent"
-        border.color: "#80FFFFFF"
+        border.color: "#70FFFFFF"
         border.width: 2
     }
 

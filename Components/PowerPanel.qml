@@ -104,9 +104,9 @@ Item {
 
     Popup {
         id: powerPopup
-        width: 119
+        width: 125
         height: poweroffButton.height + rebootButton.height + sleepButton.height + 10
-        x: Math.round((powerButton.width - width) / 2)
+        x: Math.round((powerButton.width - width) / 2) - 13
         y: -117
         z: 3
         topPadding: 5
