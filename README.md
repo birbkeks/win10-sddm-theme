@@ -6,6 +6,8 @@
 2. [Missing Features](#missing-features)
 3. [Requirement](#requirements)
 4. [Installation](#installation)
+  - [If you're using KDE Plasma desktop environment](#if-youre-using-kde-plasma-desktop-environment)
+  - [If you're using a desktop environment other than KDE Plasma](#if-youre-using-a-desktop-environment-other-than-kde-plasma)
 5. [Testing](#testing)
 
 ## Gallery
@@ -34,15 +36,25 @@ Missing features from Windows 10 login screen that's planned to be added in the 
 ## Requirements
 
 >[!IMPORTANT]
->Please install [Segoe UI Regular](https://github.com/microsoft/reactxp/raw/master/samples/TodoList/src/resources/fonts/SegoeUI-Regular.ttf), [Segoe UI Light](https://github.com/microsoft/reactxp/raw/master/samples/TodoList/src/resources/fonts/SegoeUI-Light.ttf), [Segoe UI Bold](https://github.com/microsoft/reactxp/raw/master/samples/TodoList/src/resources/fonts/SegoeUI-Bold.ttf) and [Segoe MDL2](https://github.com/syncfusion/xamarin-demos/raw/master/Forms/TabView/TabView.UWP/Assets/Fonts/Segoe%20MDL2%20Assets.ttf) font to use this SDDM theme!
+>Please install [Segoe UI Regular](https://github.com/microsoft/reactxp/raw/master/samples/TodoList/src/resources/fonts/SegoeUI-Regular.ttf),
+  [Segoe UI Light](https://github.com/microsoft/reactxp/raw/master/samples/TodoList/src/resources/fonts/SegoeUI-Light.ttf) and
+    [Segoe MDL2](https://github.com/syncfusion/xamarin-demos/raw/master/Forms/TabView/TabView.UWP/Assets/Fonts/Segoe%20MDL2%20Assets.ttf)
+      font to use this SDDM theme!
 
 You only need to have SDDM installed and don't need any other extra Qt 5 or 6 plugins to install!
 
 ## Installation
 
+Please make sure to install [required fonts](#requirements) first!
 
-### If you're using a desktop environment other than Plasma:
-1- You can download this theme from [github releases](https://github.com/birbkeks/win10-sddm-theme/releases) or from this theme's [store.kde.org](https://store.kde.org/p/2170777) page.
+### If you're using KDE Plasma desktop environment:
+
+1. Open System Settings.
+2. Go to Colors & Themes and click on Login Screen (SDDM).
+3. Click on "Get New..." and search for this theme, and install it.
+
+### If you're using a desktop environment other than KDE Plasma:
+1- You can download this theme from [github releases](https://github.com/birbkeks/win10-sddm-theme/releases) or from [store.kde.org](https://store.kde.org/p/2170777) page! <br>
 2- Extract "win10-sddm-theme.tar.gz" to `/usr/share/sddm/themes`.
 
 ## Testing
