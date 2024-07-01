@@ -33,7 +33,10 @@ Missing features from Windows 10 login screen that's planned to be added in the 
 
 ## Requirements
 
-This theme doesn't depend on any other extra Qt 5 or 6 addons, so you just need SDDM installed on your system!
+>[!IMPORTANT]
+>Please install [Segoe UI Regular](https://github.com/microsoft/reactxp/raw/master/samples/TodoList/src/resources/fonts/SegoeUI-Regular.ttf), [Segoe UI Light](https://github.com/microsoft/reactxp/raw/master/samples/TodoList/src/resources/fonts/SegoeUI-Light.ttf), [Segoe UI Bold](https://github.com/microsoft/reactxp/raw/master/samples/TodoList/src/resources/fonts/SegoeUI-Bold.ttf) and [Segoe MDL2](https://github.com/syncfusion/xamarin-demos/raw/master/Forms/TabView/TabView.UWP/Assets/Fonts/Segoe%20MDL2%20Assets.ttf) font to use this SDDM theme!
+
+You only need to have SDDM installed and don't need any other extra Qt 5 or 6 plugins to install!
 
 ## Installation
 

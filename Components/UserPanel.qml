@@ -15,26 +15,6 @@ FocusScope {
 
     property int session: sessionPanel.session
 
-    FontLoader {
-        id: iconfont
-        source: Qt.resolvedUrl("../fonts/icons.ttf")
-    }
-
-    FontLoader {
-        id: segoeuisl
-        source: Qt.resolvedUrl("../fonts/segoeuisl.ttf")
-    }
-
-    FontLoader {
-        id: segoeuil
-        source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
-    }
-
-    FontLoader {
-        id: segoeui
-        source: Qt.resolvedUrl("../fonts/segoeui.ttf")
-    }
-
     Connections {
       target: sddm
 
@@ -98,8 +78,7 @@ FocusScope {
         id: name
         color: "white"
         font.pointSize: 40
-        font.family: segoeuil.name
-        font.weight: Font.Thin
+        font.family: "Segoe UI Light"
         renderType: Text.NativeRendering
 
         anchors {
@@ -160,9 +139,8 @@ FocusScope {
 
                     contentItem: Text {
                         text: "Submit"
-                        font.family: segoeuil.name
+                        font.family: "Segoe UI"
                         renderType: Text.NativeRendering
-                        font.weight: Font.DemiBold
                         color: "white"
                     }
 

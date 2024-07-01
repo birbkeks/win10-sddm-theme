@@ -3,11 +3,6 @@ import QtQuick.Controls 2.15
 
 Item {
 
-    FontLoader {
-        id: segoeuil
-        source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
-    }
-
     Button {
         id: trueButton
         x: 1
@@ -15,7 +10,7 @@ Item {
 
         Text {
             color: "white"
-            font.family: segoeuil.name
+            font.family: "Segoe UI"
             text: "Welcome"
             renderType: Text.NativeRendering
             font.weight: Font.Normal

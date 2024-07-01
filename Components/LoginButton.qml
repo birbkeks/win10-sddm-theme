@@ -11,7 +11,7 @@ Button {
     Text {
     color: "white"
     text: String.fromCodePoint(0xebe7)
-    font.family: iconfont.name
+    font.family: "Segoe MDL2 Assets"
     font.pointSize: 13
     renderType: Text.NativeRendering
     anchors.centerIn: parent

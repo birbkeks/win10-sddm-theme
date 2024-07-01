@@ -9,21 +9,6 @@ Rectangle {
     property alias name: name.text
     property alias icon: icon.source
 
-    FontLoader {
-        id: segoeuisl
-        source: Qt.resolvedUrl("../fonts/segoeuisl.ttf")
-    }
-
-    FontLoader {
-        id: segoeuil
-        source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
-    }
-
-    FontLoader {
-        id: segoeui
-        source: Qt.resolvedUrl("../fonts/segoeui.ttf")
-    }
-
     height: 58
     color: "transparent"
 
@@ -103,7 +88,7 @@ Rectangle {
         Text {
             id: name
             renderType: Text.NativeRendering
-            font.family: segoeui.name
+            font.family: "Segoe UI"
             font.pointSize: 10
             elide: Text.ElideRight
             verticalAlignment: Text.AlignVCenter

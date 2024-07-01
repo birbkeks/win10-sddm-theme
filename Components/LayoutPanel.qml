@@ -5,16 +5,6 @@ Item {
     implicitHeight: layoutButton.height
     implicitWidth: layoutButton.width
 
-    FontLoader {
-        id: segoeui
-        source: Qt.resolvedUrl("../fonts/segoeui.ttf")
-    }
-
-    FontLoader {
-        id: segoeuil
-        source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
-    }
-
     signal valueChanged(int id)
 
     // This gives an error but works, applying what the error says causes it to not work so this stays like that for a while.
@@ -34,7 +24,7 @@ Item {
 
             contentItem: Text {
                 renderType: Text.NativeRendering
-                font.family: segoeui.name
+                font.family: "Segoe UI"
                 font.pointSize: 10
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
@@ -102,7 +92,7 @@ Item {
         Text {
             color: "white"
             text: keyboard.layouts[keyboard.currentLayout].shortName
-            font.family: segoeui.name
+            font.family: "Segoe UI"
             font.capitalization: Font.AllUppercase
             renderType: Text.NativeRendering
             font.pointSize: 12
@@ -128,9 +118,8 @@ Item {
 
             contentItem: Text {
                 text: keyboard.layouts[keyboard.currentLayout].longName
-                font.family: segoeuil.name
+                font.family: "Segoe UI"
                 renderType: Text.NativeRendering
-                font.weight: Font.DemiBold
                 color: "white"
             }
 

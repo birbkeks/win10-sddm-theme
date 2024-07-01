@@ -3,18 +3,12 @@ import QtQuick.Controls 2.15
 
 FocusScope {
 
-    FontLoader {
-        id: segoeuil
-        source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
-    }
-
     Text {
         id: falseText
         text: "The password is incorrect. Try again."
         color: "white"
         font.pointSize: 11
-        font.family: segoeuil.name
-        font.weight: Font.Normal
+        font.family: "Segoe UI Light"
         renderType: Text.NativeRendering
         x: -falseText.width / 2
     }
@@ -30,10 +24,9 @@ FocusScope {
 
         Text {
             color: "white"
-            font.family: segoeuil.name
+            font.family: "Segoe UI Light"
             text: "OK"
             renderType: Text.NativeRendering
-            font.weight: Font.Normal
             font.pointSize: 11
             anchors.centerIn: parent
         }

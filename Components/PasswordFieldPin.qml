@@ -13,8 +13,7 @@ TextField {
     echoMode: TextInput.Password ? TextInput.Password : TextInput.Normal
     selectionColor: config.Color
 
-    font.family: segoeuisl.name
-    font.weight: Font.Medium
+    font.family: "Segoe UI"
     font.pointSize: 10.9
     renderType: Text.NativeRendering
 

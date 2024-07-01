@@ -184,11 +184,6 @@ Item {
             height: parent.height
             color: "transparent"
 
-            FontLoader {
-                id: segoeuil
-                source: Qt.resolvedUrl("fonts/segoeuil.ttf")
-            }
-
             Column {
                 id: timeContainer
 
@@ -211,8 +206,7 @@ Item {
 
                     color: "white"
                     font.pointSize: 95
-                    font.family: segoeuil.name
-                    font.weight: Font.Thin
+                    font.family: "Segoe UI Light"
                     renderType: Text.NativeRendering
                     text: Qt.formatTime(timeContainer.dateTime, "hh:mm")
 
@@ -238,8 +232,7 @@ Item {
 
                     color: "white"
                     font.pointSize: 45
-                    font.family: segoeuil.name
-                    font.weight: Font.Thin
+                    font.family: "Segoe UI Light"
                     renderType: Text.NativeRendering
                     horizontalAlignment: Text.AlignLeft
                     text: Qt.formatDate(timeContainer.dateTime, "dddd, MMMM dd")

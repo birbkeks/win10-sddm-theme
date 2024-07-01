@@ -2,22 +2,6 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Item {
-
-    FontLoader {
-        id: segoeui
-        source: Qt.resolvedUrl("../fonts/segoeui.ttf")
-    }
-
-    FontLoader {
-        id: segoeuil
-        source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
-    }
-
-    FontLoader {
-        id: iconfont
-        source: Qt.resolvedUrl("../fonts/icons.ttf")
-    }
-
     Button {
         id: powerButton
         height: 50
@@ -26,7 +10,7 @@ Item {
 
         Text {
             color: "white"
-            font.family: iconfont.name
+            font.family: "Segoe MDL2 Assets"
             text: String.fromCodePoint(0xe7e8)
             renderType: Text.NativeRendering
             font.pointSize: powerButton.height / 2
@@ -48,15 +32,14 @@ Item {
 
             contentItem: Text {
                 text: "Power"
-                font.family: segoeuil.name
+                font.family: "Segoe UI"
                 renderType: Text.NativeRendering
-                font.weight: Font.DemiBold
                 color: "white"
             }
 
             background: Rectangle {
                 color: "#2A2A2A"
-                border.width: 1.4
+                border.width: 1
                 border.color: "#1A1A1A"
             }
         }
@@ -138,9 +121,8 @@ Item {
 
                 contentItem: Text {
                     text: "Closes all apps and turns off the PC."
-                    font.family: segoeuil.name
+                    font.family: "Segoe UI"
                     renderType: Text.NativeRendering
-                    font.weight: Font.DemiBold
                     color: "white"
                 }
 
@@ -162,7 +144,7 @@ Item {
                 text: "Shut Down"
                 color: "white"
 
-                font.family: segoeui.name
+                font.family: "Segoe UI"
                 font.pointSize: 10
                 leftPadding: 10
                 renderType: Text.NativeRendering
@@ -176,7 +158,7 @@ Item {
             Text {
                 id: poweroffIcon
                 color: "white"
-                font.family: iconfont.name
+                font.family: "Segoe MDL2 Assets"
                 text: String.fromCodePoint(0xe7e8)
                 renderType: Text.NativeRendering
                 font.pointSize: 12
@@ -228,7 +210,7 @@ Item {
                 text: "Restart"
                 color: "white"
 
-                font.family: segoeui.name
+                font.family: "Segoe UI"
                 font.pointSize: 10
                 leftPadding: 10
                 renderType: Text.NativeRendering
@@ -242,7 +224,7 @@ Item {
             Text {
                 id: rebootIcon
                 color: "white"
-                font.family: iconfont.name
+                font.family: "Segoe MDL2 Assets"
                 text: String.fromCodePoint(0xe777)
                 renderType: Text.NativeRendering
                 font.pointSize: 12
@@ -268,15 +250,14 @@ Item {
                 contentItem: Text {
                     text: "Closes all apps, turns off the PC, and then turns it on
 again."             // I had to make it like this, so it's normal, don't touch.
-                    font.family: segoeuil.name
+                    font.family: "Segoe UI"
                     renderType: Text.NativeRendering
-                    font.weight: Font.DemiBold
                     color: "white"
                 }
 
                 background: Rectangle {
                     color: "#2A2A2A"
-                    border.width: 1.4
+                    border.width: 1
                     border.color: "#1A1A1A"
                 }
             }
@@ -319,7 +300,7 @@ again."             // I had to make it like this, so it's normal, don't touch.
                 text: "Sleep"
                 color: "white"
 
-                font.family: segoeui.name
+                font.family: "Segoe UI"
                 font.pointSize: 10
                 leftPadding: 10
                 renderType: Text.NativeRendering
@@ -333,7 +314,7 @@ again."             // I had to make it like this, so it's normal, don't touch.
             Text {
                 id: sleepIcon
                 color: "white"
-                font.family: iconfont.name
+                font.family: "Segoe MDL2 Assets"
                 text: String.fromCodePoint(0xe708)
                 renderType: Text.NativeRendering
                 font.pointSize: 12
@@ -360,15 +341,14 @@ again."             // I had to make it like this, so it's normal, don't touch.
                     text: "The PC stays on but uses low power. Apps stay open so
 when the PC wakes up, you're instantly back to where
 you left off."      // Again, it had to be like this, don't touch.
-                    font.family: segoeuil.name
+                    font.family: "Segoe UI"
                     renderType: Text.NativeRendering
-                    font.weight: Font.DemiBold
                     color: "white"
                 }
 
                 background: Rectangle {
                     color: "#2A2A2A"
-                    border.width: 1.4
+                    border.width: 1
                     border.color: "#1A1A1A"
                 }
             }

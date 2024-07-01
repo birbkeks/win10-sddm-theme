@@ -7,21 +7,6 @@ Item {
     implicitHeight: sessionButton.height
     implicitWidth: sessionButton.width
 
-    FontLoader {
-        id: segoeui
-        source: Qt.resolvedUrl("../fonts/segoeui.ttf")
-    }
-
-    FontLoader {
-        id: segoeuil
-        source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
-    }
-
-    FontLoader {
-        id: iconfont
-        source: Qt.resolvedUrl("../fonts/icons.ttf")
-    }
-
     DelegateModel {
         id: sessionWrapper
         model: sessionModel
@@ -32,7 +17,7 @@ Item {
             highlighted: sessionList.currentIndex == index
             contentItem: Text {
                 renderType: Text.NativeRendering
-                font.family: segoeui.name
+                font.family: "Segoe UI"
                 font.pointSize: 10
                 verticalAlignment: Text.AlignVCenter
                 color: "black"
@@ -42,9 +27,9 @@ Item {
                     id: offon
                     text: "Off"
                     color: "black"
-                    font.family: segoeui.name
-                    font.pointSize: 10
+                    font.family: "Segoe UI"
                     font.weight: Font.Bold
+                    font.pointSize: 10
                     renderType: Text.NativeRendering
 
                     anchors {
@@ -205,7 +190,7 @@ Item {
 
         Text {
             color: "white"
-            font.family: iconfont.name
+            font.family: "Segoe MDL2 Assets"
             text: String.fromCodePoint(0xe776)
             renderType: Text.NativeRendering
             font.pointSize: sessionButton.height / 2
@@ -227,9 +212,8 @@ Item {
 
             contentItem: Text {
                 text: "Session"
-                font.family: segoeuil.name
+                font.family: "Segoe UI"
                 renderType: Text.NativeRendering
-                font.weight: Font.DemiBold
                 color: "white"
             }
 
@@ -312,7 +296,7 @@ Item {
                     color: "black"
                     text: "On-Screen Keyboard"
                     renderType: Text.NativeRendering
-                    font.family: segoeui.name
+                    font.family: "Segoe UI"
                     font.pointSize: 10
                     anchors {
                         verticalCenter: parent.verticalCenter
