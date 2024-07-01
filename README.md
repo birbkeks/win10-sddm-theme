@@ -6,8 +6,8 @@
 2. [Missing Features](#missing-features)
 3. [Requirement](#requirements)
 4. [Installation](#installation)
-  - [If you're using KDE Plasma desktop environment](#if-youre-using-kde-plasma-desktop-environment)
-  - [If you're using a desktop environment other than KDE Plasma](#if-youre-using-a-desktop-environment-other-than-kde-plasma)
+   - [If you're using KDE Plasma desktop environment](#if-youre-using-kde-plasma-desktop-environment)
+   - [If you're using a desktop environment other than KDE Plasma](#if-youre-using-a-desktop-environment-other-than-kde-plasma)
 5. [Testing](#testing)
 
 ## Gallery
