@@ -8,7 +8,7 @@ FocusScope {
         text: "The password is incorrect. Try again."
         color: "white"
         font.pointSize: 11
-        font.family: "Segoe UI Light"
+        font.family: "Segoe UI"
         renderType: Text.NativeRendering
         x: -falseText.width / 2
     }
@@ -24,7 +24,7 @@ FocusScope {
 
         Text {
             color: "white"
-            font.family: "Segoe UI Light"
+            font.family: "Segoe UI"
             text: "OK"
             renderType: Text.NativeRendering
             font.pointSize: 11
