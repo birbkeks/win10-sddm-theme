@@ -10,17 +10,17 @@ Item {
 
     FontLoader {
         id: segoeui
-        source: Qt.resolvedUrl("../fonts/SegoeUI-Regular.ttf")
+        source: Qt.resolvedUrl("../fonts/segoeui.ttf")
     }
 
     FontLoader {
         id: segoeuil
-        source: Qt.resolvedUrl("../fonts/SegoeUI-Light.ttf")
+        source: Qt.resolvedUrl("../fonts/segoeuil.ttf")
     }
 
     FontLoader {
         id: iconfont
-        source: Qt.resolvedUrl("../fonts/SegoeMDL2Assets.ttf")
+        source: Qt.resolvedUrl("../fonts/SegMDL2.ttf")
     }
 
     Rectangle {
