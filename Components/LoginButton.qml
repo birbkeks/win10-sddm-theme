@@ -11,7 +11,7 @@ Button {
     Text {
     color: "white"
     text: String.fromCodePoint(0xebe7)
-    font.family: "Segoe MDL2 Assets"
+    font.family:  Qt.resolvedUrl("../fonts") ? "Segoe MDL2 Assets" : iconfont.name
     font.pointSize: 13
     renderType: Text.NativeRendering
     anchors.centerIn: parent

@@ -88,7 +88,7 @@ Rectangle {
         Text {
             id: name
             renderType: Text.NativeRendering
-            font.family: "Segoe UI"
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
             font.pointSize: 10
             elide: Text.ElideRight
             verticalAlignment: Text.AlignVCenter

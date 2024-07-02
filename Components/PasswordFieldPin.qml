@@ -13,7 +13,7 @@ TextField {
     echoMode: TextInput.Password ? TextInput.Password : TextInput.Normal
     selectionColor: config.Color
 
-    font.family: "Segoe UI"
+    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
     font.pointSize: 10.9
     renderType: Text.NativeRendering
 

@@ -78,7 +78,7 @@ FocusScope {
         id: name
         color: "white"
         font.pointSize: 40
-        font.family: "Segoe UI Light"
+        font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Light" : segoeuil.name
         renderType: Text.NativeRendering
 
         anchors {
@@ -139,7 +139,7 @@ FocusScope {
 
                     contentItem: Text {
                         text: "Submit"
-                        font.family: "Segoe UI"
+                        font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                         renderType: Text.NativeRendering
                         color: "white"
                     }

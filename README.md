@@ -45,7 +45,14 @@ You only need to have SDDM installed and don't need any other extra Qt 5 or 6 pl
 
 ## Installation
 
-Please make sure to install [required fonts](#requirements) first!
+You can use installation script to install this theme, [required fonts](#requirements) and [Windows Cursors](https://github.com/birbkeks/windows-cursors)! 
+
+```
+wget https://raw.githubusercontent.com/birbkeks/win10-sddm-theme/main/install.sh
+```
+
+>[!IMPORTANT]
+>Please make sure to install [required fonts](#requirements) first!
 
 ### If you're using KDE Plasma desktop environment:
 

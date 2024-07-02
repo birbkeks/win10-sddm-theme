@@ -10,7 +10,7 @@ Item {
 
         Text {
             color: "white"
-            font.family: "Segoe MDL2 Assets"
+            font.family:  Qt.resolvedUrl("../fonts") ? "Segoe MDL2 Assets" : iconfont.name
             text: String.fromCodePoint(0xe7e8)
             renderType: Text.NativeRendering
             font.pointSize: powerButton.height / 2
@@ -32,7 +32,7 @@ Item {
 
             contentItem: Text {
                 text: "Power"
-                font.family: "Segoe UI"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                 renderType: Text.NativeRendering
                 color: "white"
             }
@@ -121,7 +121,7 @@ Item {
 
                 contentItem: Text {
                     text: "Closes all apps and turns off the PC."
-                    font.family: "Segoe UI"
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                     renderType: Text.NativeRendering
                     color: "white"
                 }
@@ -144,7 +144,7 @@ Item {
                 text: "Shut Down"
                 color: "white"
 
-                font.family: "Segoe UI"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                 font.pointSize: 10
                 leftPadding: 10
                 renderType: Text.NativeRendering
@@ -158,7 +158,7 @@ Item {
             Text {
                 id: poweroffIcon
                 color: "white"
-                font.family: "Segoe MDL2 Assets"
+                font.family:  Qt.resolvedUrl("../fonts") ? "Segoe MDL2 Assets" : iconfont.name
                 text: String.fromCodePoint(0xe7e8)
                 renderType: Text.NativeRendering
                 font.pointSize: 12
@@ -210,7 +210,7 @@ Item {
                 text: "Restart"
                 color: "white"
 
-                font.family: "Segoe UI"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                 font.pointSize: 10
                 leftPadding: 10
                 renderType: Text.NativeRendering
@@ -224,7 +224,7 @@ Item {
             Text {
                 id: rebootIcon
                 color: "white"
-                font.family: "Segoe MDL2 Assets"
+                font.family:  Qt.resolvedUrl("../fonts") ? "Segoe MDL2 Assets" : iconfont.name
                 text: String.fromCodePoint(0xe777)
                 renderType: Text.NativeRendering
                 font.pointSize: 12
@@ -250,7 +250,7 @@ Item {
                 contentItem: Text {
                     text: "Closes all apps, turns off the PC, and then turns it on
 again."             // I had to make it like this, so it's normal, don't touch.
-                    font.family: "Segoe UI"
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                     renderType: Text.NativeRendering
                     color: "white"
                 }
@@ -300,7 +300,7 @@ again."             // I had to make it like this, so it's normal, don't touch.
                 text: "Sleep"
                 color: "white"
 
-                font.family: "Segoe UI"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                 font.pointSize: 10
                 leftPadding: 10
                 renderType: Text.NativeRendering
@@ -314,7 +314,7 @@ again."             // I had to make it like this, so it's normal, don't touch.
             Text {
                 id: sleepIcon
                 color: "white"
-                font.family: "Segoe MDL2 Assets"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe MDL2 Assets" : iconfont.name
                 text: String.fromCodePoint(0xe708)
                 renderType: Text.NativeRendering
                 font.pointSize: 12
@@ -341,7 +341,7 @@ again."             // I had to make it like this, so it's normal, don't touch.
                     text: "The PC stays on but uses low power. Apps stay open so
 when the PC wakes up, you're instantly back to where
 you left off."      // Again, it had to be like this, don't touch.
-                    font.family: "Segoe UI"
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                     renderType: Text.NativeRendering
                     color: "white"
                 }

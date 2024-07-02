@@ -10,7 +10,7 @@ Item {
 
         Text {
             color: "white"
-            font.family: "Segoe UI"
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
             text: "Caps Lock is on"
             renderType: Text.NativeRendering
             font.weight: Font.Bold

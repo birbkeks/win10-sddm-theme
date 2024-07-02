@@ -24,7 +24,7 @@ Item {
 
             contentItem: Text {
                 renderType: Text.NativeRendering
-                font.family: "Segoe UI"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                 font.pointSize: 10
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
@@ -92,7 +92,7 @@ Item {
         Text {
             color: "white"
             text: keyboard.layouts[keyboard.currentLayout].shortName
-            font.family: "Segoe UI"
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
             font.capitalization: Font.AllUppercase
             renderType: Text.NativeRendering
             font.pointSize: 12
@@ -118,7 +118,7 @@ Item {
 
             contentItem: Text {
                 text: keyboard.layouts[keyboard.currentLayout].longName
-                font.family: "Segoe UI"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                 renderType: Text.NativeRendering
                 color: "white"
             }

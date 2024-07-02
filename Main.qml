@@ -8,6 +8,21 @@ Item {
     width: Screen.width
     height: Screen.height
 
+    FontLoader {
+        id: segoeui
+        source: Qt.resolvedUrl("../fonts/SegoeUI-Regular.ttf")
+    }
+
+    FontLoader {
+        id: segoeuil
+        source: Qt.resolvedUrl("../fonts/SegoeUI-Light.ttf")
+    }
+
+    FontLoader {
+        id: iconfont
+        source: Qt.resolvedUrl("../fonts/SegoeMDL2Assets.ttf")
+    }
+
     Rectangle {
         id: background
         anchors.fill: parent
@@ -206,7 +221,7 @@ Item {
 
                     color: "white"
                     font.pointSize: 95
-                    font.family: "Segoe UI Light"
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Light" : segoeuil.name
                     renderType: Text.NativeRendering
                     text: Qt.formatTime(timeContainer.dateTime, "hh:mm")
 

@@ -17,7 +17,7 @@ Item {
             highlighted: sessionList.currentIndex == index
             contentItem: Text {
                 renderType: Text.NativeRendering
-                font.family: "Segoe UI"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                 font.pointSize: 10
                 verticalAlignment: Text.AlignVCenter
                 color: "black"
@@ -27,7 +27,7 @@ Item {
                     id: offon
                     text: "Off"
                     color: "black"
-                    font.family: "Segoe UI"
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                     font.weight: Font.Bold
                     font.pointSize: 10
                     renderType: Text.NativeRendering
@@ -190,7 +190,7 @@ Item {
 
         Text {
             color: "white"
-            font.family: "Segoe MDL2 Assets"
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe MDL2 Assets" : iconfont.name
             text: String.fromCodePoint(0xe776)
             renderType: Text.NativeRendering
             font.pointSize: sessionButton.height / 2
@@ -212,7 +212,7 @@ Item {
 
             contentItem: Text {
                 text: "Session"
-                font.family: "Segoe UI"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                 renderType: Text.NativeRendering
                 color: "white"
             }
@@ -296,7 +296,7 @@ Item {
                     color: "black"
                     text: "On-Screen Keyboard"
                     renderType: Text.NativeRendering
-                    font.family: "Segoe UI"
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
                     font.pointSize: 10
                     anchors {
                         verticalCenter: parent.verticalCenter
