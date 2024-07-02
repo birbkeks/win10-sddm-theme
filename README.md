@@ -6,8 +6,10 @@
 2. [Missing Features](#missing-features)
 3. [Requirement](#requirements)
 4. [Installation](#installation)
-   - [If you're using KDE Plasma desktop environment](#if-youre-using-kde-plasma-desktop-environment)
-   - [If you're using a desktop environment other than KDE Plasma](#if-youre-using-a-desktop-environment-other-than-kde-plasma)
+   - [From KDE Plasma system settings](#from-kde-plasma-system-settings)
+   - [Manual installation on KDE Plasma desktop environment](#manual-installation-on-kde-plasma-desktop-environment)
+   - [If you're not using KDE Plasma](#if-youre-not-using-kde-plasma)
+
 5. [Testing](#testing)
 
 ## Gallery
@@ -56,15 +58,20 @@ chmod +x install.sh
 >[!IMPORTANT]
 >Please make sure to install [required fonts](#requirements) first!
 
-### If you're using KDE Plasma desktop environment:
-
+### From KDE Plasma system settings:
 1. Open System Settings.
 2. Go to Colors & Themes and click on Login Screen (SDDM).
-3. Click on "Get New..." and search for this theme, and install it.
+3. Click on "Get New..." and search for this theme, and install it from there.
 
-### If you're using a desktop environment other than KDE Plasma:
+### Manual installation on KDE Plasma desktop environment:
 1- You can download this theme from [github releases](https://github.com/birbkeks/win10-sddm-theme/releases) or from [store.kde.org](https://store.kde.org/p/2170777) page! <br>
-2- Extract "win10-sddm-theme.tar.gz" to `/usr/share/sddm/themes`.
+2- Extract "win10-sddm-theme.tar.gz" to `/usr/share/sddm/themes`. <br>
+3- Edit /etc/sddm.conf.d/kde_settings.conf  and under `[Theme]`, change `Current=` to `Current=win10-sddm-theme`.
+
+### If you're not using KDE Plasma:
+1- You can download this theme from [github releases](https://github.com/birbkeks/win10-sddm-theme/releases) or from [store.kde.org](https://store.kde.org/p/2170777) page! <br>
+2- Extract "win10-sddm-theme.tar.gz" to `/usr/share/sddm/themes`. <br>
+3- Edit /etc/sddm.conf  and under `[Theme]`, change `Current=` to `Current=win10-sddm-theme`.
 
 ## Testing
 
