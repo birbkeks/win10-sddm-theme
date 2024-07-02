@@ -49,6 +49,8 @@ You can use installation script to install this theme, [required fonts](#require
 
 ```
 wget https://raw.githubusercontent.com/birbkeks/win10-sddm-theme/main/install.sh
+chmod +x install.sh
+./install.sh
 ```
 
 >[!IMPORTANT]
