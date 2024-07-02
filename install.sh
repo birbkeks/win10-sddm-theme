@@ -42,6 +42,10 @@ function cursor() {
 
     sudo cp /usr/share/icons/windows-cursors/index.theme /usr/share/icons/default/index.theme
 
+    sudo cp -r /usr/share/icons/windows-cursors/cursors /usr/share/icons/default
+
+    sudo rm -rf /usr/share/icons/windows-cursors
+
     sudo rm -f /usr/share/icons/windows-cursors.tar.gz
 }
 
