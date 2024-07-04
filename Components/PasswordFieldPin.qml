@@ -11,7 +11,7 @@ TextField {
     property alias text: passwordFieldPin.text
 
     echoMode: TextInput.Password ? TextInput.Password : TextInput.Normal
-    selectionColor: config.Color
+    selectionColor: config.color
 
     font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
     font.pointSize: 10.9

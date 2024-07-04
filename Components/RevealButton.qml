@@ -38,7 +38,7 @@ Button {
             }
             PropertyChanges {
                 target: revealButtonBackground
-                color: config.Color
+                color: config.color
             }
             PropertyChanges {
                 target: revealText
@@ -61,7 +61,7 @@ Button {
             when: revealButton.hovered
             PropertyChanges {
                 target: revealText
-                color: config.Color
+                color: config.color
             }
         }
     ]
