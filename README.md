@@ -32,7 +32,6 @@ Missing features from Windows 10 login screen that's planned to be added in the 
 
 - Internet icons
 - On-Screen Keyboard
-- Different default user icon
 - Successful login message [(this is a SDDM bug, waiting it to be fixed)](https://github.com/sddm/sddm/issues/1960)
 
 ## Requirements

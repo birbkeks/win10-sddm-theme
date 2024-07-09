@@ -19,10 +19,14 @@ FocusScope {
       target: sddm
 
         function onLoginFailed() {
+            truePass.visible = false
 
             passwordField.visible = false
             passwordField.enabled = false
             passwordField.focus = false
+
+            rightPanel.visible = false
+            leftPanel.visible = false
 
             passwordFieldPin.visible = false
             passwordFieldPin.enabled = false
@@ -32,14 +36,7 @@ FocusScope {
             falsePass.focus = true
         }
 
-        function onLoginSucceeded() {
-
-            passwordField.visible = false
-
-            passwordFieldPin.visible = false
-
-            truePass.visible = true
-        }
+        function onLoginSucceeded() {}
     }
 
     Image {
@@ -121,8 +118,23 @@ FocusScope {
             }
         }
 
-        Keys.onReturnPressed: sddm.login(model.name, password, session)
-        Keys.onEnterPressed: sddm.login(model.name, password, session)
+        Keys.onReturnPressed: {
+            truePass.visible = true
+            passwordField.visible = false
+            passwordFieldPin.visible = false
+            rightPanel.visible = false
+            leftPanel.visible = false
+            sddm.login(model.name, password, session)
+        }
+
+        Keys.onEnterPressed: {
+            truePass.visible = true
+            passwordField.visible = false
+            passwordFieldPin.visible = false
+            rightPanel.visible = false
+            leftPanel.visible = false
+            sddm.login(model.name, password, session)
+        }
 
         LoginBg {
             id: loginBg
@@ -159,8 +171,13 @@ FocusScope {
                 }
 
                 onClicked: {
-                    sddm.login(model.name, password, session)
                     loginButtonTip.hide()
+                    truePass.visible = true
+                    rightPanel.visible = false
+                    leftPanel.visible = false
+                    passwordField.visible = false
+                    passwordFieldPin.visible = false
+                    sddm.login(model.name, password, session)
                 }
             }
 
@@ -202,7 +219,9 @@ FocusScope {
             }
 
             if (passwordFieldPin.length > 3 ) {
-                sddm.login(model.name, passwordpin, session)
+                rightPanel.visible = false
+                leftPanel.visible = false
+                sddm.login(model.name, password, session)
             }
         }
 
@@ -229,14 +248,28 @@ FocusScope {
         }
     }
 
-    TruePass {
+    Rectangle {
         id: truePass
+        x: 1
+        y: 1
+        color: "transparent"
         visible: false
 
         anchors {
             horizontalCenter: parent.horizontalCenter
             topMargin: 25
             top: name.bottom
+        }
+
+        Text {
+            id: welcome
+            color: "white"
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI" : segoeui.name
+            text: "Welcome"
+            renderType: Text.NativeRendering
+            font.weight: Font.Normal
+            font.pointSize: 18
+            anchors.centerIn: parent
         }
     }
 
@@ -265,9 +298,8 @@ FocusScope {
         ]
 
         anchors {
-            horizontalCenter: parent.horizontalCenter
-            topMargin: 25
             top: passwordField.bottom
+            topMargin: 25
         }
     }
 }
