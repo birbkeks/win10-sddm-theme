@@ -65,6 +65,82 @@ Item {
             }
         }
 
+        Text {
+            id: warning
+            visible: segoeui.status === FontLoader.Error ? true : false
+
+            color: "white"
+            font.pointSize: 19
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Light" : segoeuisb.name
+            font.weight: Font.DemiBold
+            renderType: Text.NativeRendering
+            horizontalAlignment: Text.AlignLeft
+            text: "Please install the required fonts!"
+            bottomPadding: 400
+
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: parent.verticalCenter
+            }
+        }
+
+        Text {
+            id: warning2
+            visible: warning.visible ? true : false
+
+            color: "white"
+            font.pointSize: 19
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Light" : segoeuisb.name
+            font.weight: Font.DemiBold
+            renderType: Text.NativeRendering
+            horizontalAlignment: Text.AlignLeft
+            text: "Check the Github repo from 'https://github.com/birbkeks/win10-sddm-theme' "
+            bottomPadding: 250
+
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: parent.verticalCenter
+            }
+        }
+
+        Text {
+            id: warning3
+            visible: warning.visible ? true : false
+
+            color: "white"
+            font.pointSize: 19
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Light" : segoeuisb.name
+            font.weight: Font.DemiBold
+            renderType: Text.NativeRendering
+            horizontalAlignment: Text.AlignLeft
+            text: "or run '/usr/share/sddm/themes/win10-sddm-theme/install.sh' in your terminal!"
+            bottomPadding: 200
+
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: parent.verticalCenter
+            }
+        }
+
+        Text {
+            id: warning4
+            visible: warning.visible ? true : false
+
+            color: "white"
+            font.pointSize: 19
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Light" : segoeuisb.name
+            font.weight: Font.DemiBold
+            renderType: Text.NativeRendering
+            horizontalAlignment: Text.AlignLeft
+            text: "I can't include those fonts in my project because of legal issues with Microsoft!"
+            bottomPadding: 50
+
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: parent.verticalCenter
+            }
+        }
+
         MouseArea {
             id: mouseArea
             anchors.fill: parent
