@@ -270,6 +270,8 @@ FocusScope {
             font.weight: Font.Normal
             font.pointSize: 18
             anchors.centerIn: parent
+
+            topPadding: 20
         }
     }
 

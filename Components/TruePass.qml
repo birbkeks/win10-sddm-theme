@@ -1,3 +1,8 @@
+// UNUSED FILE!
+// Planning to use boot up animation but I can't because SDDM isn't made for something like this.
+// https://github.com/sddm/sddm/issues/1960
+
+
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
