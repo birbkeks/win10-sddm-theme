@@ -65,9 +65,18 @@ Item {
             }
         }
 
+        FontLoader {
+            id: localsys
+            source: "/usr/local/share/fonts/s/SegMDL2.ttf"
+        }
+
         Text {
             id: warning
-            visible: segoeui.status === FontLoader.Error ? true : false
+            visible: {
+                if (segoeui.status === FontLoader.Error && localsys.status === FontLoader.Error) return true
+
+                return false
+            }
 
             color: "white"
             font.pointSize: 19

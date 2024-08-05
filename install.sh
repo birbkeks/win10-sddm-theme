@@ -52,6 +52,8 @@ function font() {
     sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://aka.ms/SegoeFonts -nc
 
     sudo bsdtar xf /usr/share/sddm/themes/win10-sddm-theme/fonts/SegoeFonts -C /usr/share/sddm/themes/win10-sddm-theme/fonts
+
+    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://github.com/Z2r-YT/Fake-Windows-Update-Screen/raw/main/src/font/SegoeBoot-Semilight.woff -nc
 }
 
 function cursor() {
