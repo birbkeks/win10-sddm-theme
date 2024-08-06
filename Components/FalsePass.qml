@@ -117,7 +117,7 @@ FocusScope {
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
 
-                leftPanel.visible = true
+                leftPanel.visible = listView2.count > 1 ? true : false
                 rightPanel.visible = true
 
                 passwordField.text = ""
@@ -136,7 +136,7 @@ FocusScope {
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
 
-                leftPanel.visible = true
+                leftPanel.visible = listView2.count > 1 ? true : false
                 rightPanel.visible = true
 
                 passwordField.text = ""
@@ -155,7 +155,7 @@ FocusScope {
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
 
-                leftPanel.visible = true
+                leftPanel.visible = listView2.count > 1 ? true : false
                 rightPanel.visible = true
 
                 passwordField.text = ""
