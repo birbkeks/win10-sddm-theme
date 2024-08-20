@@ -49,11 +49,13 @@ Current=win10-sddm-theme
 function font() {
     # Not installed locally because I can't stand to see this font on Github and other websites, I couldn't find a way to disable this font for browser. I'm used to see Noto Sans too much I guess. You can go to this fonts files and install it locally if you want to and this theme will still work.
 
-    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://aka.ms/SegoeFonts -nc
+    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://github.com/birbkeks/win10-sddm-theme/raw/main/fonts/segoeui.ttf -nc
 
-    sudo bsdtar xf /usr/share/sddm/themes/win10-sddm-theme/fonts/SegoeFonts -C /usr/share/sddm/themes/win10-sddm-theme/fonts
+    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://github.com/birbkeks/win10-sddm-theme/raw/main/fonts/segoeuil.ttf -nc
 
-    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://github.com/Z2r-YT/Fake-Windows-Update-Screen/raw/main/src/font/SegoeBoot-Semilight.woff -nc
+    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://github.com/birbkeks/win10-sddm-theme/raw/main/fonts/SegMDL2.ttf -nc
+
+    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://github.com/birbkeks/win10-sddm-theme/raw/main/fonts/SegoeBoot-Semilight.woff -nc
 }
 
 function cursor() {
